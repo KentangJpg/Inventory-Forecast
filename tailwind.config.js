@@ -2,11 +2,7 @@
 export default {
   content: [],
   theme: {
-    extend: {
-      colors: {
-        SideBarColor: '#93C2D4'
-      }
-    },
+    extend: {},
   },
   plugins: [],
 }

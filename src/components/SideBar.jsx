@@ -22,7 +22,7 @@ const SideBar = () => {
     ];
 
     return (
-        <div className=''>
+        <div className='w-75 rounded-[2vw] shadow-2xl/30 p-4 flex flex-col gap-4 h-screen sticky top-0 left-0 z-10 m-1'>
             {/* Welcome Messsage*/}
             <Item icon={"CompanyIcon"} menuItem={"Welcome Back, Admin!"} />
 
