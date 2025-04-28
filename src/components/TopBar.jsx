@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch, faBell, faUser } from "../icons/icons.jsx";
+
 const TopBar = () => {
     return (
         <div className="p-4 flex items-center w-full rounded-lg h-20">
@@ -11,10 +14,13 @@ const TopBar = () => {
             </ul>
 
             <form className="search flex ml-auto border border-gray-300 rounded-lg p-2">
-                <button type="sumbit" className="mr-2">S</button>
-                <input type="text" placeholder="Search..." className="search-input" />
+                <button type="sumbit" className="mr-2">
+                    <FontAwesomeIcon icon={faSearch} />
+                </button>
+                <input type="text" placeholder=" Search..." className="search-input" />
             </form>
-            <img src="profile" alt="." className="ml-5" />
+            <FontAwesomeIcon icon={faBell} className="ml-5" />
+            <FontAwesomeIcon icon={faUser} className="ml-5" />
         </div >
     );
 };

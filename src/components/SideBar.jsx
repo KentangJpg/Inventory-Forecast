@@ -1,30 +1,33 @@
 import ItemGroup from './SideBarGroup';
 import Item from './SideBarItem';
+import { faHome, faComments, faClipboardCheck, faTableCellsLarge, faUser, faUserLock, faBug, faGear, faQuestionCircle } from '../icons/icons';
 
 const SideBar = () => {
     const generalItems = [
-        { icon: 'path/to/icon1', menuItem: 'Dashboard' },
-        { icon: 'path/to/icon2', menuItem: 'Inventory' },
-        { icon: 'path/to/icon3', menuItem: 'Forecast' },
-        { icon: 'path/to/icon4', menuItem: '???' },
-        { icon: 'path/to/icon5', menuItem: '???' }
+        { icon: faHome, menuItem: ' Dashboard', path: '/' },
+        { icon: faClipboardCheck, menuItem: ' Inventory', path: '/inventory' },
+        { icon: faTableCellsLarge, menuItem: ' Forecast' },
+        { icon: faComments, menuItem: ' ???' },
+        { icon: faUser, menuItem: ' ???' }
     ];
 
     const group2Items = [
-        { icon: 'path/to/icon6', menuItem: '???' },
-        { icon: 'path/to/icon6', menuItem: '???' },
+        { icon: faUserLock, menuItem: ' ???' },
+        { icon: faBug, menuItem: ' ???' },
     ];
 
 
     const otherItems = [
-        { icon: 'path/to/icon7', menuItem: 'Settings' },
-        { icon: 'path/to/icon7', menuItem: 'Help Center' },
+        { icon: faGear, menuItem: ' Settings' },
+        { icon: faQuestionCircle, menuItem: ' Help Center' },
     ];
 
     return (
-        <div className='w-75 rounded-[2vw] shadow-2xl/30 p-4 flex flex-col gap-4 h-screen sticky top-0 left-0 z-10 m-1'>
+        <div className='w-70 rounded-[2vw] shadow-2xl/30 p-3 flex flex-col h-screen sticky top-0 left-0 z-10 m-4 border-2 border-gray-300 '>
             {/* Welcome Messsage*/}
-            <Item icon={"CompanyIcon"} menuItem={"Welcome Back, Admin!"} />
+            <div className="mb-6">
+                <Item icon={"CompanyIcon"} menuItem={"Welcome Back, Admin!"} />
+            </div>
 
             {/* Rendering Groups */}
             <ItemGroup GroupName={"General"} items={generalItems} />

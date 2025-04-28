@@ -5,3 +5,7 @@
   --color-SideBarColor : #93C2D49E;
   --color-SideBarColorHover : #93C2D4;
 }
+
+.svg-inline--fa {
+  color: black;
+}

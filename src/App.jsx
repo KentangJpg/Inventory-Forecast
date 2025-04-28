@@ -1,19 +1,20 @@
 import './index.css'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage'
+import Inventory from './pages/Inventory'
+import SideBar from './components/SideBar'
 
 function App() {
   return (
-    <Router>
-      <div className="app-container">
-        <HomePage />
-        <div className="main-content">
-          <Routes>
-            <Route path="/home" component={HomePage} />
-          </Routes>
-        </div>
+    <main className='flex min-h-screen'>
+      <SideBar />
+      <div className="flex-1 overflow-y-auto">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/inventory" element={<Inventory />} />
+        </Routes>
       </div>
-    </Router>
+    </main>
   )
 }
 
